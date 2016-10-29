@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container" id="center">
+    <div class="jumbotron" id="center">
+        <h1>Called to Serve</h1>
+        <p>Found out what former missionaries have to say about their missions!</p>
+        <p><a href="@Url.Action("Index", "Missions")" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" id="cool">
+            <h2>The Church of Jesus Christ of Latter-day Saints</h2>
+            <p>Learn more about the Church as part of your preparation to serve!</p>
+            <p><a class="btn btn-default" href="http://www.lds.org">Go &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Weather</h2>
+            <p>See how the weather is right now in your mission, or the mission of someone you know.</p>
+            <p><a class="btn btn-default" href="https://weather.com/">Go &raquo;</a></p>
+        </div>
+        <div class="col-md-4" id="cool">
+            <h2>Videos</h2>
+            <p>Watch some awesome videos about the gospel of Jesus Christ.</p>
+            <p><a class="btn btn-default" href="@Url.Action("Videos", "Missions")">Go &raquo;</a></p>
+        </div>
+    </div>
+</div>

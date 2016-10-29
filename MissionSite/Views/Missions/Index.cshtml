@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Missions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Missions</h2>
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        Select a Mission
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("Faq", "Missions", new
+                {
+                    name = "Brasil Salvador",
+                    mpName = "Ted Lisonbee",
+                    address = "Av. Antônio C. Magalhães, 3247 Ed. Empresarial Delta-Sala 402 Pituba 41830-355 Salvador - BA",
+                    language = "Portuguese",
+                    climate = "Tropical Rainforest",
+                    religion = "Candomblé",
+                    flag = "bahia.png"
+                }
+                     )">Brasil Salvador</a></li>
+        <li><a href="@Url.Action("Faq", "Missions", new
+                {
+                    name = "Brasil Santos",
+                    mpName = "Celso B. Cabral",
+                    address = "Av. Ana Costa, 414 Salas 24-25 Gonzaga 11060-002 Santos - SP",
+                    language = "Portuguese",
+                    climate = "Tropical Rainforest",
+                    religion = "Catholicism",
+                    flag = "santos.png"
+                }
+                     )">Brasil Santos</a></li>
+        <li><a href="@Url.Action("Faq", "Missions", new
+                {
+                    name = "California Anaheim",
+                    mpName = "Steven W. Taggart",
+                    address = "2500 N Bristol St Santa Ana CA 92706",
+                    language = "English",
+                    climate = "Mediterranean",
+                    religion = "Catholicism",
+                    flag = "anaheim.png"
+                }
+                     )">California Anaheim</a></li>
+        <li><a href="@Url.Action("Faq", "Missions", new
+                {
+                    name = "Italia Roma",
+                    mpName = "Giuseppe Pasta",
+                    address = "Piazza Monte Gemma, 9 00141 Rome RM",
+                    language = "Italian",
+                    climate = "Mediterranean",
+                    religion = "Catholicism",
+                    flag = "rome.png"
+                }
+                     )">Italia Roma</a></li>
+    </ul>
+</div>

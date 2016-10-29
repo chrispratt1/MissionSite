@@ -1,0 +1,62 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('/Content/world.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Content/world.png')) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100vh;
+}
+
+html {
+    text-align: center;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1 {
+    font-family: "Kaushan Script";
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#cool{  
+  background: hsla(225, 69%, 78%, 0.72);
+  font-family: 'Lucida';
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}
+
+#cool2{  
+  font-family: 'Lucida';
+  font-size: 20px;
+  display: table;
+  margin: 0 auto;
+}
+
+#center {
+    display: table;
+    margin: 0 auto;
+}
+
+#about {
+    border: solid 
+}

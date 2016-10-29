@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Faq";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul class="breadcrumb list-unstyled">
+    <li>
+        @Html.ActionLink("Missions", "Index", "Missions")
+    </li>
+    <li>
+        @ViewBag.name
+    </li>
+</ul>
+
+<div id="center">
+    <h2><b>@ViewBag.name</b></h2>
+
+    <div class="col-md-8 col-lg-8" id="cool2">
+        <p><i>Mission President : </i>@ViewBag.mpName</p>
+        <p><i>Address : </i>@ViewBag.address</p>
+        <p><i>Language : </i>@ViewBag.language</p>
+        <p><i>Climate : </i>@ViewBag.climate</p>
+        <p><i>Predominant Religion : </i>@ViewBag.religion</p>
+    </div>
+
+    <div class="col-md-4"><img src="~/Content/@ViewBag.flag" /></div>
+   
+    <div class="container col-md-12 col-lg-12" id="cool">
+        <p>
+            <a href="javascript:toggleElement('a1')"><b>@ViewBag.q1</b></a>
+            <div id="a1" style="display:none">
+                Work on strengthening your own understanding and testimony of the gospel by praying daily and studying the scriptures,
+                especially the Book of Mormon. Attend your Church meetings. Participate in seminary or institute, if available. You may share
+                the gospel with a friend, go to teaching appointments with the full-time missionaries, or ask recently returned missionaries
+                about their experiences in the mission field. You may also become familiar with Preach My Gospel, especially chapters 1 and 3.
+                For additional counsel on your preparation, see a recent interview with Brother David L. Beck, Young Men general president.
+            </div>
+        </p>
+        <p>
+            <a href="javascript:toggleElement('a2')"><b>@ViewBag.q2</b></a>
+            <div id="a2" style="display:none">
+                Elder L. Tom Perry explained: “Missionary service is emotionally demanding. Your support system is going to be withdrawn
+                from you as you leave home and go out into the world. … There will be days of rejection and disappointment. Learn now
+                about your emotional limits, and learn how to control your emotions under the circumstances you will face as a missionary” (L. Tom Perry, “Raising the Bar,” Liahona, Nov. 2007, 48).
+            </div>
+        </p>
+        <p>
+            <a href="javascript:toggleElement('a3')"><b>@ViewBag.q3</b></a>
+            <div id="a3" style="display:none">
+                Missionaries and their families should make appropriate sacrifices to provide financial support for a mission. Counsel with
+                your parents and bishop regarding your specific situation. Consider also Elder Russell M. Nelson's teachings from his October
+                2012 general conference address:
+                “Preparation for a mission is important. A mission is a voluntary act of service to God and humankind. Missionaries support
+                that privilege with their personal savings. Parents, families, friends, and donors to the General Missionary Fund may also
+                assist. All missionaries, younger and older, serve with the sole hope of making life better for other people.”
+            </div>
+        </p>
+        <p>
+            <a href="javascript:toggleElement('a4')"><b>@ViewBag.q4</b></a>
+            <div id="a4" style="display:none">
+                Yes. Physical health is an important part of missionary service. A missionary must be able to walk an average of six miles (10
+                km) per day and ride a bicycle 12 miles (19 km) per day. Weight guidelines exist for prospective missionaries. Talk to your
+                bishop or branch president for more information or if you are concerned about the physical requirements for missionaries.
+                For additional information, see the March 2007 Ensign article “Missionary Health Preparation.”
+            </div>
+        </p>
+    </div>
+
+    <form>
+        <br><h3>Have a question?</h2><br>
+    <input type="text" name="question" placeholder="Enter question">
+    <input type="submit" value="Submit">
+</form>
+
+    <form>
+        <br><h3>Have a response?</h3><br>
+        
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Select a Question
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li>@ViewBag.q1</li>
+                <li>@ViewBag.q2</li>
+                <li>@ViewBag.q3</li>
+                <li>@ViewBag.q4</li>
+            </ul>
+        </div>
+        <br><input type="text" name="question" placeholder="Enter response">
+        <input type="submit" value="Submit">
+    </form>
+
+</div>
+
+<script>
+
+    function toggleElement(id) {
+        if (document.getElementById(id).style.display == 'none') {
+            document.getElementById(id).style.display = '';
+        }
+        else {
+            document.getElementById(id).style.display = 'none';
+        }
+    }
+</script>
